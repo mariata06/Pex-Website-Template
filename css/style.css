@@ -1,0 +1,555 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+/***********************************************************************************
+***************************************ШРИФТЫ***************************************
+***********************************************************************************/
+@font-face {
+    font-family: opensans-bold;                                 /* Гарнитура шрифта */
+    src: url("../fonts/opensans/opensans-bold.ttf");               /* Путь к файлу со шрифтом */            
+} 
+
+@font-face {
+    font-family: opensans-regular;                                 /* Гарнитура шрифта */
+    src: url("../fonts/opensans/opensans-regular.ttf");               /* Путь к файлу со шрифтом */            
+} 
+
+@font-face {
+    font-family: opensans-light;                                 /* Гарнитура шрифта */
+    src: url("../fonts/opensans/opensans-light.ttf");               /* Путь к файлу со шрифтом */            
+} 
+
+@font-face {
+    font-family: myriadpro-regular;                                 /* Гарнитура шрифта */
+    src: url("../fonts/myriadpro/myriadpro-regular.ttf");               /* Путь к файлу со шрифтом */            
+} 
+
+@font-face {
+    font-family: cheltenham-blackitaliccy;                          /* Гарнитура шрифта */
+    src: url("../fonts/cheltenham/cheltenham-blackitaliccy.otf");   /* Путь к файлу со шрифтом */            
+} 
+
+html { 
+overflow-x:  hidden;      
+/*убирает горизонтальную полосу прокрутки*/
+}
+
+.container {
+	margin: 0px auto;
+	width: 1600px;
+}
+
+/************************************************************************************
+******************************************Header*************************************
+*************************************************************************************/
+header {
+	background-image: url("../img/headerBackgroundblur.png");
+	background-repeat: no-repeat;
+	width: 100%;
+	height: 890px;
+	position: relative;
+}
+
+/**********************************************************************************
+*************************Логотип и Навигация в общем блоке logo-nav****************
+***********************************************************************************/
+.logo-nav {
+	height: 44px;
+	flex-wrap:wrap;
+	display: flex;
+	padding-top: 29px;
+	padding-left: 210px;
+	padding-bottom: 29px;
+	border-bottom: solid 1px rgba(255, 255, 255, 0.1);
+}
+
+/*****************************************Логотип***********************************/
+.Logo {
+	height: 20px;
+	width: 260px;
+	display: flex;
+	align-items: center;
+	padding-top: 14px;
+}
+/*************************************Меню навигации********************************/
+nav {
+	display: flex;
+	align-items: center;
+}
+.logo-nav ul {
+	height: 25px;
+	list-style: none;
+	padding-left: 485px;
+	display: flex;
+}
+.logo-nav li {
+	display: inline-block;
+	font-family: "opensans-regular", "Arial", san-serif;
+	padding-right: 30px;
+}
+.logo-nav li a {
+	text-decoration: none;
+	line-height: 1.2;
+	font-size: 13px;
+	color: rgb(255, 255, 255);
+	text-transform: capitalize;
+	align-items: center;
+}
+/***********палочка подчеркивание внизу каждого li-a при наведении на li-a**********/
+a::after { 
+	content: "";
+    display: block;
+	align-self: baseline;
+	height: 3px;
+	width: 34px;
+	background-color: transparent; 
+	margin: 42px auto 0px auto;
+	text-align: center;
+}
+a:hover::after {
+	background-color: #fff;
+}
+
+/********************************Pex в контейнере Логотипа**************************/
+.Logo span {
+	font-family: "cheltenham-blackitaliccy", "Arial", sans-serif;
+	font-size: 25px;
+	color: rgb(231, 82, 107);
+}
+/*****************************абзац p в контейнере Логотипа*************************/
+.Logo p {
+	font-family: "cheltenham-blackitaliccy", "Arial", sans-serif;
+	font-size: 15px;
+	color: #fff;
+	padding-left: 10px;
+}
+#faq {
+	text-transform: uppercase;
+}
+.search {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.search__input {
+	width: 192px;
+	padding: 10px 20px;
+	border-radius: 100px;
+	outline: none;
+	border: none;
+}
+.search__input:focus {
+	outline: none;
+}
+input[placeholder] {
+	padding-left: 28px;
+	text-transform: capitalize;
+	font-family: "opensans-regular", "Arial", san-serif;
+	font-size: 12px;
+	color: rgb(98, 98, 98);
+	margin-right: -37px;
+}
+
+.search__button {
+	border: none;
+	background-color: #fff;
+	outline: none;
+}
+.search__button:focus {
+	outline: none;
+}
+.search__button:active {
+	transform: translateY(2px);
+}
+.search_icon {
+	display: block;
+	margin-bottom: -5px;
+}
+/***********************************************************************************
+*****************************Slogan on main Page************************************
+***********************************************************************************/
+.slogan {
+	padding-top:  276px;
+	padding-left: 226px;
+	width: 500px;
+	height: 260px;
+}
+.slogan h2 {
+	font-size: 50px;
+	font-family: "opensans-light", "Arial", sans-serif;
+	font-weight: lighter;
+ 	color: #fff;
+ 	line-height: 1.4;
+	text-align: right;
+	padding-bottom: 50px;
+}
+.slogan p {
+	font-family: "opensans-light", "Arial", sans-serif;
+	font-size: 12px;
+	color: #fff;
+	padding-top: 18px;
+	margin-right: 26px;
+	text-align: right;
+}
+
+/*************************************************************************************
+****************************ОСНОВНОЙ СТИЛЬ ДЛЯ ВСЕХ КНОПОК****************************
+**************************************************************************************/
+button[type="button"] {
+	border-radius: 31px;
+  	background-color: rgb(255, 255, 255);
+  	width: 341px;
+	height: 62px;
+	font-family: "opensans-bold", "Arial", san-serif;
+	text-transform: capitalize;
+	font-size: 18px;
+	color: #b94256;
+	border: 0;
+}
+button[type="button"]:active {
+	background: #8e3646;
+	outline: none;
+}
+button[type="button"]:focus {
+	outline: none;
+}
+
+/*******************************КНОПКА в блоке слоган-header************************/
+#btn-slogan {
+	background: #8824cd;
+	color: #fff;
+	box-shadow: 0px 1px 0px 0px rgba(0, 0, 0, 0.2),inset 0px 1px 0px 0px rgba(255, 255, 255, 0.4);
+	margin-left: 226px;
+	width: 280px;
+}
+#btn-slogan:active {
+	background: #a87bb7;
+	outline: none;
+}
+/********************************************************************************
+*********************************Блок Aside серого цвета*************************
+********************************************************************************/
+aside {
+	background-color: #2e3b4e;
+	width: 820px;
+	border-style: solid;
+	border-color: #2e3b4e;
+	border-width: 78px 390px 70px 390px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-content: center;
+	align-items: flex-end;
+	position: relative;
+	z-index: 1;
+}
+
+aside::after {
+	width: 279px; 
+	height: 154px;
+	content: ''; 
+	background-image: url('../img/shape-5.png');
+	background-repeat: no-repeat;
+	position: absolute;
+	margin: 213px 320px 213px 320px;	
+}
+  
+aside .whatWedo {
+	width: 400px;
+	height: 100%;  
+	display: flex;
+	flex-direction: column;
+}
+.whatWedo h3 {
+	font-family: "opensans-bold", "Arial", san-serif;
+	color: #fff;
+	text-transform: uppercase;
+	padding-bottom: 34px;
+	font-size: 15px;
+}
+.whatWedo p {
+	font-family: "opensans-regular", "Arial", san-serif;
+	color: #fff;
+	font-size: 15px;
+	line-height: 1.733;
+	padding-bottom: 72px;
+}
+.border-shape {
+	position: absolute;
+	margin: 214px auto 214px auto;
+	z-index: 2;
+}
+/*******************************************************************************
+***************************Блок Offer Розового цвета****************************
+*******************************************************************************/
+.Offer {
+	width: 1600px;
+	height: 540px;
+	background-image: url("../img/getStartedbackground.png");
+	background-repeat: no-repeat; 
+}
+.Offer::before {
+	width: 68px;
+  height: 34px;
+  border: solid #2e3b4e;
+  border-radius: 0 0 50% 50% / 0 0 100% 100%;
+  background: #2e3b4e;
+}
+.txt-offer {
+	padding-top: 155px;
+	text-align: center;
+}
+.txt-offer h2 {
+	font-family: "opensans-light", "Arial", san-serif;
+	color: #fff;
+	font-weight: lighter;
+	padding-bottom: 20px;
+	font-size: 35px;
+}
+.txt-offer p {
+	font-family: "opensans-light", "Arial", san-serif;
+	color: #fff;
+	font-size: 15px;
+	line-height: 1.733;
+	padding-bottom: 32px;
+}
+
+/******************************************************************************
+***********************Блок Section - Describing product***********************
+*******************************************************************************/
+.Describing {
+	width: 1600px;                
+	height: 100%;                           
+	background: #fff;
+	background-image: url("../img/whatyouneedBackground.png");
+	background-repeat: no-repeat;
+	background-position: left bottom;
+	background-size: contain;
+}
+
+.txt-describing {
+	width: 650px;
+	height: 100%;
+	padding-top: 70px; 
+	padding-left: 732px;
+	padding-bottom: 85px;
+}
+.txt-describing h2 {
+	text-transform: uppercase;
+	color: #3a4d60;
+	font-family: "opensans-bold", "Arial", san-serif;
+	font-size: 15px;
+	font-weight: bolder;
+	padding-bottom: 18px;
+}
+.txt-describing p:first-of-type {
+	font-family: "opensans-bold", "Arial", san-serif;
+	font-size: 22px;
+	color: #3a4d60;
+	line-height: 1.733;
+	padding-bottom: 16px;
+}
+.txt-describing p:last-of-type {
+	font-family: "opensans-bold", "Arial", san-serif;
+	font-size: 15px;
+	color: #3a4d60;
+	line-height: 1.733;
+}
+
+/*************************************************************************************
+**********************************Блок Section - Experience***************************
+*************************************************************************************/
+.Experience {
+	width: 1600px; 
+	height: 550px;               
+	background-image: linear-gradient(rgba(255, 255, 255,.1), rgba(255, 255, 255,.1)), url("../img/experienceBackgroundbw.png");
+	background-blend-mode: overlay;
+}
+
+.colored-layer {
+	height: 455px;
+	width: 1600px;
+	background: linear-gradient(rgba(112, 49, 135, 0.5), rgba(112, 49, 135, 0.5));
+	text-align: center;
+	position: relative;
+	left: 0;
+	top: 95px; 
+}
+
+.txt-experience {
+	width: 100%;
+	padding-top: 96px;
+	color: #fff; 
+}
+
+.txt-experience h2 {
+	font-family: "opensans-light", "Arial", sans-serif;
+	font-size: 40px;
+	color: #fff;
+	font-weight: lighter;
+	padding-bottom: 30px;
+}
+.txt-experience p:first-of-type {
+	font-family: "opensans-regular", "Arial", sans-serif;
+	font-size: 20px;
+	color: rgb(168, 123, 183);
+	line-height: 1.65;
+	padding-bottom: 30px;
+}
+.txt-experience p:last-of-type {
+	font-family: "opensans-regular", "Arial", sans-serif;
+	font-size: 12px;
+	color: #fff;
+	padding-top: 20px;
+}
+/**************************Кнопка в блоке Section - Experience***********************/
+#btn-experience {
+	background: #8824cd;
+	color: #fff;
+	box-shadow: 0px 1px 0px 0px rgba(0, 0, 0, 0.2),inset 0px 1px 0px 0px rgba(255, 255, 255, 0.4);
+}
+#btn-experience:active {
+	background: #a87bb7;
+	outline: none;
+}
+/*************************************************************************************
+**********************************Блок PHOTOGRAPHY************************************
+*************************************************************************************/
+.Photography {
+	width: 1600px;                
+	height: 100%;  
+	background-image: url("../img/photographyBackgroundshadow.png");
+	background-repeat: no-repeat;
+}
+
+.txt-photography {
+	width: 517px;                
+	height: 222px;  
+	padding-top: 358px;
+	padding-left: 210px;
+	padding-bottom: 89px;
+}
+#btn-photography {
+	background: transparent;
+	border: solid #fff 2px;
+	color: #fff;
+	width: 135px;
+	height: 35px;
+	font-family: "opensans-semibold", "Arial", sans-serif;
+	font-size: 13px;
+}
+#btn-photography:active {
+	background: #fff;
+	color: black;
+	outline: none;
+	border: none;
+}
+.txt-photography p {
+	padding-top: 28px;
+	font-size: 40px;
+  	font-family: "opensans-regular", "Arial", sans-serif;
+  	color: #fff;
+  	line-height: 1.25;
+}
+.author {
+	display: flex;
+	align-items: center;
+}
+.author p {
+	padding-top: 0px;
+	font-size: 13px;
+	font-family: "opensans-semibold", "Arial", sans-serif;
+	color: #fff;
+	padding-left: 15px;
+}
+/*************************************************************************************
+**********************************Блок Section - ABOUT********************************
+*************************************************************************************/
+.About {
+	width: 1600px;       
+	height: 100%;                                   
+	background: #fff;
+	background-image: url("../img/aboutBackground.png");
+	background-repeat: no-repeat;
+	background-position: right bottom;
+	background-size: contain;
+}
+
+.txt-about {
+	width: 648px;
+	height: 100%;
+	padding-top: 90px;
+	padding-left: 210px;
+	padding-bottom: 90px;
+}
+
+.txt-about h2 {
+	text-transform: uppercase;
+	color: #3a4d60;
+	font-family: "opensans-bold", "Arial", san-serif;
+	font-size: 15px;
+	font-weight: bolder;
+	padding-bottom: 14px;
+}
+.txt-about p:first-of-type {
+	font-family: "opensans-bold", "Arial", san-serif;
+	font-size: 20px;
+	color: #3a4d60;
+	line-height: 1.733;
+	padding-bottom: 40px;
+}
+.txt-about p:last-of-type {
+	font-family: "opensans-bold", "Arial", san-serif;
+	font-size: 15px;
+	color: #3a4d60;
+	line-height: 1.733;
+}
+
+.Contacts {
+	width: 1600px;                
+	height: 100%;                           
+	background: #e7526b;
+}
+.txt-contacts {
+	width: 400px;
+	height: 140px;
+	padding-top: 78px;
+	padding-left: 210px;
+	padding-bottom: 229px; 
+}
+.txt-contacts h2 {
+	text-transform: uppercase;
+	color: #fff;
+	font-family: "opensans-bold", "Arial", san-serif;
+	font-size: 15px;
+	font-weight: bolder;
+	padding-bottom: 20px;
+}
+.txt-contacts p, span {
+	font-family: "opensans-regular", "Arial", san-serif;
+	font-size: 15px;
+	color: #fff;
+	line-height: 1.733;
+}
+.txt-contacts p {
+	padding-bottom: 20px;
+}
+
+.Copyright {
+	width: 1600px;                
+	height: 366px;                           
+	background: #2e3b4e;
+}
+.txt-copyright {
+	width: 1000px;
+	height: 20px;
+	padding-top: 48px;
+	padding-left: 210px;
+}
+.Copyright p {
+	font-family: "opensans-regular", "Arial", san-serif;
+	font-size: 15px;
+	color: #fff;
+}
